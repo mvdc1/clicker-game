@@ -1,4 +1,5 @@
 import express from "express";
+import * as path from 'path';
 import {createLogger, format, transports} from "winston";
 
 const web = express();
@@ -13,9 +14,7 @@ function logm(c: string) {
 	});
 }
 
-web.get("/", (req, res) => {
-	res.sendFile(__dirname + "/pages/index.html");
-});
+web.use(express.static(path.join(__dirname,"pages")));
 
 web.listen(80, (err) => {
 	const date = new Date();

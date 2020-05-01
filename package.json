@@ -39,5 +39,8 @@
     "printWidth": 99999
   },
   "author": "Mitchell van der Craats",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@types/node": "^13.13.4"
+  }
 }
