@@ -1,6 +1,5 @@
 import express from "express";
 import * as path from "path";
-import process from "process";
 import {createLogger, format, transports} from "winston";
 
 const web = express();
@@ -14,10 +13,6 @@ function logm(c: string) {
 		message: c
 	});
 }
-
-process.on("SIGINT", () => {
-	process.exit(0);
-});
 
 web.use(express.static(path.join(__dirname, "pages")));
 
