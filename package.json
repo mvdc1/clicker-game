@@ -8,7 +8,7 @@
     "simple",
     "website",
     "remote",
-    "scoreboarddc"
+    "scoreboard"
   ],
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -26,6 +26,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {},
+  "repository" : {"type": "git", "url": "git://github.com/mvdc1/clicker-game.git"},
   "author": "Mitchell van der Craats",
-  "license": "ISC"
+  "license": "MPL-2.0"
 }

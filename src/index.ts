@@ -1,10 +1,11 @@
 import express from "express";
 import winston from "winston";
 const web = express();
+
 const log = winston.createLogger({
     transports: [
         new winston.transports.Console(),
-        new winston.transports.File({filename: "logs/main.log"})
+        new winston.transports.File({filename: "logs/main.json"})
       ]
 })
 
@@ -25,5 +26,5 @@ web.get("/", (req, res) => {
 
 web.listen(80, () => {
     const date = new Date()
-    logf("Started clicker at " + date + ", link: localhost:80")
+    logf("Started clicker at " + date + ", URL: localhost:80")
 } );
