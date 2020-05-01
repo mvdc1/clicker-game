@@ -1,30 +1,27 @@
 import express from "express";
-import winston from "winston";
+import {createLogger, format, transports} from "winston";
+
 const web = express();
+const log = createLogger({
+	transports: [new transports.Console({format: format.simple()}), new transports.File({filename: "logs/main.json"})]
+});
 
-const log = winston.createLogger({
-    transports: [
-        new winston.transports.Console(),
-        new winston.transports.File({filename: "logs/main.json"})
-      ]
-})
-
-function logc(c:string) {
-    log.info(c);
-}
-
-function logf(c:string) {
-    log.log({
-        level: 'info',
-        message: c
-      });
+function logm(c: string) {
+	log.log({
+		level: "info",
+		message: c,
+	});
 }
 
 web.get("/", (req, res) => {
-    res.send("Hello world!");
-} );
+	res.send("Hello world!");
+});
 
-web.listen(80, () => {
-    const date = new Date()
-    logf("Started clicker at " + date + ", URL: localhost:80")
-} );
+web.listen(80, (err) => {
+	const date = new Date();
+    if (err){
+        logm("Attempted clicker website at " + date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() + " on " + date.getMonth() + date.getDate() + ", although an error occurred.")
+    } else {
+        logm("Started clicker website at " + date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() + " on " + date.getMonth() + date.getDate() + ", URL: localhost:80");
+    }
+});

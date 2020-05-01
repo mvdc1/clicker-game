@@ -25,8 +25,19 @@
     "typescript": "^3.8.3",
     "winston": "^3.2.1"
   },
-  "devDependencies": {},
-  "repository" : {"type": "git", "url": "git://github.com/mvdc1/clicker-game.git"},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mvdc1/clicker-game.git"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "useTabs": true,
+    "semi": true,
+    "singleQuote": false,
+    "bracketSpacing": false,
+    "printWidth": 99999
+  },
   "author": "Mitchell van der Craats",
   "license": "MPL-2.0"
 }

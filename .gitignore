@@ -2,6 +2,7 @@
 /node_modules/*
 /logs/*
 /dist/*
+/scoreboard/*
 
 #Files
 LICENSE
