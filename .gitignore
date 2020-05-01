@@ -1,9 +1,10 @@
 # Directories
 /node_modules/*
 /logs/*
-/dist/*
 /scoreboard/*
 
 #Files
 LICENSE
 package-lock.json
+/dist/index.js
+/dist/index.js.map

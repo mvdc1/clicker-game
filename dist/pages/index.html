@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        a {
+            font-size: 300%;
+        }
+        p {
+            font-size: 300%;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="countplus()">click me</a>
+    <br>
+    <p id="num"></p>
+</body>
+<script>
+    var count = 0;
+    function countplus() {
+        count+=1;
+        document.getElementById("num").innerHTML = count;
+    }
+</script>
+</html>

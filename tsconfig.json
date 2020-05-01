@@ -12,5 +12,5 @@
       "*": ["node_modules/*", "lib/*"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "dist/pages/**/*"]
 }
