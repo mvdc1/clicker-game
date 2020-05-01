@@ -5,25 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker Game</title>
     <link rel="icon" href="img\favicon.png" type="image/png" />
-    <style>
-        button {
-            font-size: 300%;
-        }
-        p {
-            font-size: 300%;
-        }
-    </style>
+    <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
     <button onclick="countplus()">Clicker</button>
     <br>
     <p id="num"></p>
 </body>
-<script>
-    var count = 0;
-    function countplus() {
-        count+=1;
-        document.getElementById("num").innerHTML = count;
-    }
-</script>
+<script src="js/sketch.js"></script>
 </html>
