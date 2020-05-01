@@ -2,7 +2,7 @@
   "name": "clicker-game",
   "version": "1.0.0",
   "description": "Simple clicker game.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "clicker",
     "simple",
