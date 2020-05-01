@@ -16,11 +16,11 @@ function logm(c: string) {
 
 web.use(express.static(path.join(__dirname, "pages")));
 
-web.listen(process.env.PORT, (err) => {
+web.listen(80, (err) => {
 	const date = new Date();
 	if (err) {
 		logm("Attempted clicker website at " + date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() + " on " + date.getMonth() + date.getDate() + ", although an error occurred.");
 	} else {
-		logm("Started clicker website at " + date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() + " on " + date.getMonth() + date.getDate() + ", URL: localhost:" + process.env.PORT);
+		logm("Started clicker website at " + date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() + " on " + date.getMonth() + date.getDate() + ", URL: localhost:80");
 	}
 });
