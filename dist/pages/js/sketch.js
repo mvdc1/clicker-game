@@ -1,3 +1,4 @@
+// Setting up click counter.
 var count = 0;
 var colours = ["red", "orange", "green", "blue", "black"];
 function countplus() {

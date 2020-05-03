@@ -1,28 +1,28 @@
 // tslint:disable-next-line
-const electron = require("electron");
-const {app, BrowserWindow, Menu, dialog} = electron;
+const electron = require("electron"); // Enabling Electron in project.
+const {app, BrowserWindow, Menu, dialog} = electron; // Setting up Electron.
 
-app.on('window-all-closed', () => {{
+app.on('window-all-closed', () => {{ // Ensuring that the application closes when the close button is selected.
     app.quit();
 }
 });
 
 app.on("ready", () => {
 
-	let mainWindow = new BrowserWindow({width: 620, height: 200, resizable: false});
-	mainWindow.loadURL("file://" + __dirname + "/pages/index.html");
+	let mainWindow = new BrowserWindow({width: 620, height: 200, resizable: false}); // Sets the application window.
+	mainWindow.loadURL("file://" + __dirname + "/pages/index.html"); // Points to file to display.
 
 	mainWindow.on("closed", () => {
-		mainWindow = null;
+		mainWindow = null; // Ensuring that the application closes when the close button is selected.
 	});
 
-	Menu.setApplicationMenu(Menu.buildFromTemplate(mainMenuTemplate));
+	Menu.setApplicationMenu(Menu.buildFromTemplate(mainMenuTemplate)); // Setting up main menu.
 
 });
 
 const mainMenuTemplate = [
 	{
-		label: "Clicker Game",
+		label: "Clicker Game (" + process.env.user || process.env.username + ")",
 		submenu: [
 			{
 				label: "Leaderboard (beta)",
@@ -44,8 +44,5 @@ const mainMenuTemplate = [
 				}
 			}
 		]
-	},
-	{
-		label: process.env.user || process.env.username
 	}
 ]
