@@ -11,6 +11,7 @@
     "scoreboard"
   ],
   "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "electron .",
@@ -19,6 +20,7 @@
   "dependencies": {
     "@types/express": "^4.17.6",
     "electron": "^8.2.5",
+    "tslint": "^6.1.2",
     "typescript": "^3.8.3"
   },
   "repository": {
