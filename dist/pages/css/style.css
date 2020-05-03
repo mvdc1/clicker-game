@@ -1,8 +1,46 @@
-button {
-    font-size: 300%;
-    color: red;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+body {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "Ubuntu", sans-serif;
+    display: table;
+    overflow: hidden;
+    background-color: rgb(214, 196, 255);
 }
 
-p {
-    font-size: 300%;
+span[id="a"] {
+    text-align: center;
+}
+
+a[id="clicker"] {
+	font-size: 250%;
+	color: #000000;
+	text-decoration: none;
+	padding-top: 5.2%;
+	height: 39%;
+	width: 60%;
+	position: absolute;
+	transition: 0.5s;
+}
+
+a[id="clicker"]:hover {
+	color: #3a474f;
+	transition: 0.5s;
+}
+
+p[id="num"] {
+    font-size: 250%;
+    margin-top: 5%;
+	margin-left: 70%;
+	position: absolute;
+}
+
+p[id="num"]:hover {
+	cursor: default;
+}
+
+div {
+	display: inline-block;
 }

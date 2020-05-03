@@ -1,7 +1,10 @@
 var count = 0;
-var colours = ["red", "orange", "green", "pink", "blue"];
+var colours = ["red", "orange", "green", "blue", "black"];
 function countplus() {
 	count += 1;
-	document.getElementById("num").innerHTML = count;
-	document.getElementById("num").style = "color: " + colours[Math.floor(Math.random() * colours.length)] + "; transition: 0.8s;";
+	if (count == 1) {
+	document.getElementById("num").innerHTML = count + " click.";
+	} else if(count !== 1) {
+	document.getElementById("num").innerHTML = count + " clicks.";
+	}
 }
