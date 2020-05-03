@@ -1,6 +1,6 @@
 // tslint:disable-next-line
 const electron = require("electron");
-const {app, BrowserWindow, Menu} = electron;
+const {app, BrowserWindow, Menu, dialog} = electron;
 
 app.on('window-all-closed', () => {{
     app.quit();
@@ -9,7 +9,7 @@ app.on('window-all-closed', () => {{
 
 app.on("ready", () => {
 
-	let mainWindow = new BrowserWindow({width: 590, height: 200, resizable: false});
+	let mainWindow = new BrowserWindow({width: 620, height: 200, resizable: false});
 	mainWindow.loadURL("file://" + __dirname + "/pages/index.html");
 
 	mainWindow.on("closed", () => {
@@ -18,8 +18,6 @@ app.on("ready", () => {
 
 	Menu.setApplicationMenu(Menu.buildFromTemplate(mainMenuTemplate));
 
-	// let scoreboard = new BrowserWindow({width: 300, height: 800});
-
 });
 
 const mainMenuTemplate = [
@@ -27,10 +25,16 @@ const mainMenuTemplate = [
 		label: "Clicker Game",
 		submenu: [
 			{
-				label: "Game"
-			},
-			{
-				label: "Scoreboard"
+				label: "Leaderboard (beta)",
+				click() {
+					dialog.showMessageBox(null, {
+						type: "info",
+						buttons: ["Okay"],
+						defaultId: 1,
+						Title: "Information",
+						message: "Apologies, this area is for the app developer only as it is not yet stable."
+					});
+				}
 			},
 			{
 				label: "Quit Game",
@@ -40,5 +44,8 @@ const mainMenuTemplate = [
 				}
 			}
 		]
+	},
+	{
+		label: process.env.user || process.env.username
 	}
 ]
