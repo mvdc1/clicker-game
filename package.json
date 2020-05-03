@@ -1,42 +1,46 @@
 {
-  "name": "clicker-game",
-  "version": "1.0.0",
-  "description": "Simple clicker game.",
-  "main": "dist/index.js",
-  "keywords": [
-    "clicker",
-    "simple",
-    "website",
-    "remote",
-    "scoreboard"
-  ],
-  "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc",
-    "prestart": "npm run build",
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "@types/node": "^13.13.4",
-    "electron": "^8.2.5",
-    "tslint": "^6.1.2",
-    "typescript": "^3.8.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mvdc1/clicker-game.git"
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 4,
-    "useTabs": true,
-    "semi": true,
-    "singleQuote": false,
-    "bracketSpacing": false,
-    "printWidth": 99999
-  },
-  "author": "Mitchell van der Craats",
-  "license": "MPL-2.0",
-  "devDependencies": {}
+	"name": "clicker-game",
+	"version": "1.0.0",
+	"description": "Simple clicker game.",
+	"main": "dist/index.js",
+	"keywords": [
+		"clicker",
+		"simple",
+		"website",
+		"remote",
+		"scoreboard"
+	],
+	"scripts": {
+		"prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+		"build": "tsc",
+		"prestart": "npm run build",
+		"start": "electron ."
+	},
+	"dependencies": {
+		"@types/node": "^13.13.4",
+		"tslint": "^6.1.2",
+		"typescript": "^3.8.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mvdc1/clicker-game.git"
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"tabWidth": 4,
+		"useTabs": true,
+		"semi": true,
+		"singleQuote": false,
+		"bracketSpacing": false,
+		"printWidth": 99999
+	},
+	"build": {
+		"appId": "com.mitchell.clicker"
+	},
+	"author": "Mitchell van der Craats",
+	"license": "MPL-2.0",
+	"devDependencies": {
+		"electron": "^8.2.5",
+		"electron-builder": "^22.6.0"
+	}
 }
